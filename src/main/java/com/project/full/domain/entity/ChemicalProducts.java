@@ -1,5 +1,6 @@
 package com.project.full.domain.entity;
 
+import com.project.full.util.config.Danger;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,16 +13,15 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class ChemicalProducts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NonNull
-    private String name;
-    @NonNull
-    private String document;
-    @NonNull
-    private String email;
-    private String phone;
+    private String ProductName;
+
+    private Danger danger;
+
+    private String classification;
 
 }
